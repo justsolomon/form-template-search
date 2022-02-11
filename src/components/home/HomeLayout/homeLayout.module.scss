@@ -1,0 +1,14 @@
+@import 'styles/variables';
+
+.home {
+  width: 80%;
+  margin: 80px auto;
+
+  @media #{$media-desktop} {
+    width: 90%;
+  }
+
+  @media #{$media-mobile--sm} {
+    margin: 40px auto;
+  }
+}

@@ -1,0 +1,55 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.template-card {
+  @include flex(column);
+
+  justify-content: space-between;
+  height: 220px;
+  box-shadow: $card-shadow;
+
+  &__details {
+    padding: 20px;
+    text-transform: capitalize;
+  }
+
+  &__header {
+    @include truncate-text(2);
+
+    margin-bottom: 18px;
+    font-size: $font-size--lg;
+    line-height: $font-size--xl;
+    color: $text-dark;
+  }
+
+  &__description {
+    @include truncate-text(3);
+  }
+
+  &__footer {
+    @include flex-center();
+
+    height: 40px;
+    padding: 0 20px;
+    background-color: $card-footer-bg;
+
+    &__link {
+      text-decoration: none;
+      color: $text-green;
+    }
+  }
+
+  @media #{$media-mobile} {
+    height: 200px;
+
+    &__header {
+      font-size: $font-size--md;
+      line-height: $font-size--lg;
+    }
+
+    &__description {
+      font-size: $font-size--sm;
+      line-height: $font-size--base;
+    }
+  }
+}

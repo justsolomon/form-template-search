@@ -1,0 +1,48 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.page-controls {
+  @include flex-center();
+
+  margin: 75px 50px 0 50px;
+  justify-content: space-between;
+
+  button svg {
+    width: 6px;
+    height: 12px;
+  }
+
+  &__prev-button {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__current-page {
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary-color;
+    border-radius: $border-radius--md;
+  }
+
+  @media #{$media-mobile} {
+    margin: 60px 12px 0 12px;
+  }
+
+  @media #{$media-mobile--sm} {
+    margin: 50px 0 0 0;
+
+    button {
+      font-size: $font-size--base;
+
+      svg {
+        width: 5px;
+        height: 9px;
+      }
+    }
+  }
+}

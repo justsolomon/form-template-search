@@ -10,12 +10,12 @@
   cursor: pointer;
   color: #fff;
   font-size: $font-size--md;
+  line-height: $font-size--lg;
   font-weight: $font-weight--bold;
   border-radius: $border-radius--sm;
 
   &:focus-visible {
     outline: none;
-    box-shadow: $shadow-outline;
   }
 
   &:disabled {
@@ -23,56 +23,13 @@
     opacity: 0.7;
   }
 
-  &--solid,
-  &--primary {
-    background-color: $brand-color--primary;
-
-    &:hover {
-      background-color: $brand-color--secondary;
-    }
-
-    &:active {
-      background-color: $brand-color--tertiary;
-    }
-
-    &:disabled:hover {
-      background-color: $brand-color--primary;
-    }
-  }
-
-  &--secondary {
-    background-color: $bg-light--primary;
-    color: $primary-color;
-
-    &:hover {
-      background-color: $bg-light--secondary;
-    }
-
-    &:active {
-      background-color: $bg-light--tertiary;
-    }
-
-    &:disabled:hover {
-      background-color: $bg-light--primary;
-    }
-  }
-
   &--ghost,
   &--transparent {
+    color: $primary-color;
     background-color: transparent;
 
     &:disabled:hover {
       background-color: transparent;
-    }
-  }
-
-  &--ghost {
-    &:hover {
-      background-color: $bg-light--primary;
-    }
-
-    &:active {
-      background-color: $bg-light--secondary;
     }
   }
 
@@ -85,12 +42,19 @@
     height: 32px;
   }
 
-  &__left-icon {
-    margin: 3px 8px 0 0;
-
+  &__left-icon,
+  &__right-icon {
     svg {
       height: 16px;
       width: 16px;
     }
+  }
+
+  &__left-icon {
+    margin-right: 12px;
+  }
+
+  &__right-icon {
+    margin-left: 12px;
   }
 }

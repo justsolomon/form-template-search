@@ -1,0 +1,64 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.input-group {
+  @include flex-center();
+
+  width: 320px;
+  position: relative;
+  justify-content: flex-start;
+
+  &__input {
+    height: 45px;
+    width: 100%;
+    padding: 0 32px;
+    border: 1px solid $input-border;
+    border-radius: $border-radius--sm;
+    background-color: $white;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+    &--has-left {
+      padding-left: 48px;
+    }
+
+    &--has-right {
+      padding-right: 48px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__left-element,
+  &__right-element {
+    @include input-group-element();
+
+    justify-content: center;
+  }
+
+  &__left-element {
+    &--overflow {
+      width: unset;
+    }
+
+    span {
+      font-size: $font-size--md;
+      margin: -3px 0 0 8px;
+    }
+  }
+
+  &__right-element {
+    left: unset;
+    right: 0;
+  }
+
+  @media #{$media-mobile--sm} {
+    &__input {
+      padding: 0 16px;
+    }
+  }
+}

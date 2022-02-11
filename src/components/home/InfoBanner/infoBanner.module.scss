@@ -1,0 +1,30 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.info-banner {
+  @include flex-center();
+
+  height: 60px;
+  margin: 85px 0 65px 0;
+  padding: 0 16px;
+  justify-content: center;
+  background-color: $banner-bg;
+  border-radius: $border-radius--sm;
+
+  &__text {
+    margin-left: 24px;
+    color: $text-black;
+  }
+
+  @media #{$media-desktop--sm} {
+    &__text {
+      margin-left: 12px;
+    }
+  }
+
+  @media #{$media-mobile} {
+    height: unset;
+    margin: 40px 0 35px 0;
+    padding: 8px 16px;
+  }
+}

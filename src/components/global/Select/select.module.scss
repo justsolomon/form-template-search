@@ -1,0 +1,54 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.select-group {
+  @include flex-center();
+
+  justify-content: flex-start;
+  position: relative;
+
+  &__label {
+    position: absolute;
+    left: 18px;
+    top: -7px;
+    padding: 0 6px;
+    font-size: $font-size--xs;
+    color: $secondary-color;
+    background-color: $white;
+    z-index: 1;
+  }
+
+  &__select {
+    height: 40px;
+    width: 100%;
+    padding: 0 24px;
+    border: 1px solid $select-border;
+    appearance: none;
+    cursor: pointer;
+    border-radius: $border-radius--sm;
+    background-color: $white;
+  }
+
+  &__dropdown-icon {
+    @include input-group-element();
+
+    padding: 0 15px;
+    left: unset;
+    right: 0;
+
+    svg {
+      height: 6px;
+      width: 12px;
+    }
+  }
+
+  @media #{$media-mobile--sm} {
+    &__label {
+      left: 10px;
+    }
+
+    &__select {
+      padding: 0 16px;
+    }
+  }
+}
