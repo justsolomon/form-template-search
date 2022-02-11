@@ -24,6 +24,7 @@
 
   &__description {
     @include truncate-text(3);
+    font-family: $secondary-font-family;
   }
 
   &__footer {
