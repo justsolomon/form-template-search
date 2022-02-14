@@ -15,6 +15,7 @@ const TemplateListHeader = ({
       <h1
         className={styles['list-header__title']}
       >{`${category} Templates`}</h1>
+
       <p
         className={styles['list-header__templates-number']}
       >{`${numOfTemplates} templates`}</p>

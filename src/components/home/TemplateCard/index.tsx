@@ -8,6 +8,7 @@ const TemplateCard = ({ name, description, link }: Template) => {
         <h2 className={styles['template-card__header']}>{name}</h2>
         <p className={styles['template-card__description']}>{description}</p>
       </div>
+
       <div className={styles['template-card__footer']}>
         <a
           href={link}

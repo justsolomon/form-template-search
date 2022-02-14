@@ -1,10 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { Template } from 'types/global';
-import { baseUrl } from 'utils/config';
+import { apiBaseUrl } from 'utils/config';
 
 const templateApi = createApi({
   reducerPath: 'templateApi',
-  baseQuery: fetchBaseQuery({ baseUrl }),
+  baseQuery: fetchBaseQuery({ baseUrl: apiBaseUrl }),
   endpoints: (builder) => ({
     fetchTemplates: builder.query<Template[], void>({
       query: () => `/public/task_templates`,

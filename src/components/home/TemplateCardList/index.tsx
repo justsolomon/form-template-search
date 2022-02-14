@@ -8,9 +8,12 @@ interface TemplateCardListProps {
 
 const TemplateCardList = ({ templates }: TemplateCardListProps) => {
   return (
-    <ul className={styles['template-card-list']}>
-      {templates.map((template) => (
-        <TemplateCard {...template} />
+    <ul
+      className={styles['template-card-list']}
+      data-testid="template-card-list"
+    >
+      {templates.map((template, index) => (
+        <TemplateCard {...template} key={index} />
       ))}
     </ul>
   );
