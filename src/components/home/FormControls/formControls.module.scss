@@ -2,13 +2,13 @@
 @import 'styles/mixins';
 
 .form-controls {
+  justify-content: space-between;
+
   &,
   &__filters,
   &__filters__selects {
     @include flex-center();
   }
-
-  justify-content: space-between;
 
   &__filters {
     &__selects {

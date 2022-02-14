@@ -42,12 +42,21 @@ function Button({
         isLoading ? styles['button--loading'] : ''
       }`}
       disabled={isDisabled || isLoading}
+      data-testid="button"
       {...rest}
     >
       {leftIcon ? (
         <span className={styles['button__left-icon']}>{leftIcon}</span>
       ) : null}
-      <>{isLoading ? <Spinner size="24px" color="#ffffff" /> : children}</>
+
+      <>
+        {isLoading ? (
+          <Spinner size="24px" color="#ffffff" data-testid="button__spinner" />
+        ) : (
+          children
+        )}
+      </>
+
       {rightIcon ? (
         <span className={styles['button__right-icon']}>{rightIcon}</span>
       ) : null}

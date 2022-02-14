@@ -3,7 +3,7 @@ export type TemplateOrder = 'Default' | 'Ascending' | 'Descending';
 
 export interface Template {
   name: string;
-  created: Date;
+  created: string;
   category: TemplateCategory[];
   description: string;
   link: string;
