@@ -44,6 +44,8 @@
 
   &__left-icon,
   &__right-icon {
+    display: inline-flex;
+
     svg {
       height: 16px;
       width: 16px;

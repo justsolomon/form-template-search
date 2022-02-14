@@ -8,3 +8,8 @@ export interface Template {
   description: string;
   link: string;
 }
+
+export interface QueryError<ErrorType = null> {
+  data?: ErrorType;
+  error: string;
+}

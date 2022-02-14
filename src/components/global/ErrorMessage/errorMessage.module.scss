@@ -1,0 +1,43 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.error-message {
+  @include flex-center();
+  flex-direction: column;
+  text-align: center;
+
+  &__description {
+    margin: 1rem 0;
+    font-size: $font-size--base;
+    line-height: $font-size--md;
+
+    @media #{$media-mobile--sm} {
+      font-size: $font-size--sm;
+    }
+  }
+
+  &__button {
+    height: 36px;
+    font-size: $font-size--base;
+    background-color: $blue--primary;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: $blue--secondary;
+    }
+
+    &:active {
+      background-color: $blue--tertiary;
+    }
+
+    span {
+      margin-right: 6px;
+    }
+
+    svg {
+      height: 18px;
+      width: 18px;
+      color: $white;
+    }
+  }
+}
