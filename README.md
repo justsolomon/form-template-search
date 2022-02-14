@@ -34,3 +34,15 @@ To run the app locally, follow the steps below:
    ```
    yarn start
    ```
+
+### Run unit tests
+
+```
+npm run test
+```
+
+### Format files using Prettier
+
+```
+npm run format
+```
