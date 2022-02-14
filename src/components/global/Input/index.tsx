@@ -15,7 +15,7 @@ const Input = ({
   return (
     <div className={`${styles['input-group']} ${containerClass}`}>
       {leftIcon ? (
-        <div className={styles['input-group__left-element']}>{rightIcon}</div>
+        <div className={styles['input-group__left-element']}>{leftIcon}</div>
       ) : null}
 
       <input
